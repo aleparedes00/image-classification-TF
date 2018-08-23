@@ -181,10 +181,7 @@ def create_image_lists(image_dir, testing_percentage, validation_percentage):
     """
 
     text_splited = sub_dir.split("/")
-    print("textSplited: ", text_splited)
     dir_name = text_splited[len(sub_dir)-2]
-    print("dir_name:", dir_name)
-    exit()
     
     #dir_name = os.path.basename(sub_dir)
     if dir_name == image_dir:
@@ -1018,7 +1015,6 @@ def main(_):
     tf.logging.error('Only one valid folder of images found at ' +
                      FLAGS.image_dir +
                      ' - multiple classes are needed for classification.')
-    return -1
 
   # See if the command-line flags mean we're applying any distortions.
   do_distort_images = should_distort_images(
